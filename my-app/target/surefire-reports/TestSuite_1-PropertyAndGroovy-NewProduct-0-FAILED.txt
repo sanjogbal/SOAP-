@@ -1,0 +1,73 @@
+Status: FAILED
+Time Taken: 977
+Size: 421
+Timestamp: Fri Aug 07 09:52:57 IST 2020
+TestStep: NewProduct
+
+----------------- Messages ------------------------------
+[Not SOAP Fault] Response is a SOAP Fault
+
+----------------- Properties ------------------------------
+Endpoint: http://soap.upskills.in/soap/default?services=catalogProductRepositoryV1
+Encoding: UTF-8
+
+---------------- Request ---------------------------
+Request Headers: Authorization : Bearer f0rf13pxtxp7mftwc23rq6e52yvmi5um
+Connection : Keep-Alive
+User-Agent : Apache-HttpClient/4.1.1 (java 1.5)
+Host : soap.upskills.in
+Accept-Encoding : gzip,deflate
+Content-Length : 526
+Content-Type : application/soap+xml;charset=UTF-8;action="catalogProductRepositoryV1Save"
+
+
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:def="http://soap.upskills.in/soap/default?services=catalogProductRepositoryV1">
+   \r
+   <soap:Header/>
+   \r
+   <soap:Body>
+      \r
+      <def:catalogProductRepositoryV1SaveRequest>
+         \r
+         <product>
+            \r
+            <sku>SKU00001</sku>
+            <name>MacBook Air</name>
+            <attributeSetId>4</attributeSetId>
+            <price>100</price>
+            <typeId>simple</typeId>
+         </product>
+         \r
+      </def:catalogProductRepositoryV1SaveRequest>
+      \r
+   </soap:Body>
+   \r
+</soap:Envelope>
+
+---------------- Response --------------------------
+Response Headers: X-UA-Compatible : IE=edge
+Cache-Control : no-store, no-cache, must-revalidate
+Server : LiteSpeed
+Connection : Keep-Alive
+Set-Cookie : PHPSESSID=5beded157badc26c79bd009e266dca34; expires=Fri, 07-Aug-2020 05:22:58 GMT; Max-Age=3600; path=/; domain=soap.upskills.in; HttpOnly
+Expires : Thu, 19 Nov 1981 08:52:00 GMT
+Pragma : no-cache
+#status# : HTTP/1.1 200 OK
+Content-Length : 421
+Date : Fri, 07 Aug 2020 04:22:58 GMT
+X-Powered-By : PHP/7.2.32
+Content-Type : application/soap+xml; charset=UTF-8
+
+
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+   <env:Body>
+      <env:Fault>
+         <env:Code>
+            <env:Value>env:Sender</env:Value>
+         </env:Code>
+         <env:Reason>
+            <env:Text xml:lang="en">URL key for specified store already exists.</env:Text>
+         </env:Reason>
+      </env:Fault>
+   </env:Body>
+</env:Envelope>
